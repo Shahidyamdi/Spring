@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  
+ <!-- <bean id ="addr" class="com.cg.Address">
+  <constructor-arg index="0" value="786"/>
+  <constructor-arg index="1" value ="mtm"/>
+  
+  </bean>
+  
+  
+  
+       
+<bean  id="emp" class="com.cg.Emp">
+ <constructor-arg index="0" value="111"/>
+  <constructor-arg index="1" value="shahid"/>
+   <constructor-arg index="2" value="10000.00"/>
+   <constructor-arg index="3" ref="addr"/>
+ 
+ 
+ 
+ 
+ </bean>    -->   
+        
+        <bean id ="addr" class="com.cg.Address" c:dno="456" c:street="rtc colony"/>
+      <bean id ="emp" class="com.cg.Emp" c:eid="111" c:ename="shahid" c:esal="1000.00" c:address-ref="addr"/>
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+</beans>

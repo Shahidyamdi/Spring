@@ -1,0 +1,34 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="sp1" class="com.tcs.beans.Speakers" p:id="1" p:model="Z-743" 
+		p:company="sony" p:cost="8000"/> <bean id="sp2" class="com.tcs.beans.Speakers" 
+		p:id="2" p:model="Z-743" p:company="sony" p:cost="8000"/> <bean id="sp3" 
+		class="com.tcs.beans.Speakers" p:id="3" p:model="Z-743" p:company="sony" 
+		p:cost="8000"/> <bean id="sp4" class="com.tcs.beans.Speakers" p:id="4" p:model="Z-743" 
+		p:company="sony" p:cost="8000"/> -->
+
+
+	<!-- <bean id="sp1" class="com.tcs.beans.Speakers" p:id="1" p:model="Z-743" 
+		p:company="sony" p:cost="8000"/> <bean id="sp2" class="com.tcs.beans.Speakers" 
+		p:id="2" parent="sp1"/> <bean id="sp3" class="com.tcs.beans.Speakers" p:id="3" 
+		p:model="Y-9090" parent="sp1"/> <bean id="sp4" class="com.tcs.beans.Speakers" 
+		p:id="4" parent="sp1"/> -->
+
+	<bean id="base" class="com.tcs.beans.Speakers" p:model="Z-743"
+		p:company="sony" p:cost="8000" abstract="true" />
+
+	<bean id="sp1" class="com.tcs.beans.Speakers" p:id="1"
+		parent="base" />
+	<bean id="sp2" class="com.tcs.beans.Speakers" p:id="2"
+		parent="base" />
+	<bean id="sp3" class="com.tcs.beans.Speakers" p:id="3"
+		parent="base" />
+	<bean id="sp4" class="com.tcs.beans.Speakers" p:id="4"
+		parent="base" />
+
+</beans>
+

@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:c="http://www.springframework.org/schema/c"
+     xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+ 
+<context:component-scan base-package="com.tcs.bean"/> 
+<bean id ="address" class="com.tcs.bean.Address" p:doorNo="111" p:street="Madhapur" p:state="hyd"/>
+<bean id="exp" class="com.tcs.bean.Exp" p:years="2" p:months="5"/>
+<!--<bean id="emp" class="com.tcs.bean.Emp" autowire="byType"/>-->
+<!--  <bean id = "emp" class="com.tcs.bean.Emp" p:Address-ref="address" p:Exp-ref="exp"/>-->
+
+
+
+
+	
+ </beans>

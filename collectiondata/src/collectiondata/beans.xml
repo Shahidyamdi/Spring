@@ -1,0 +1,55 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:c="http://www.springframework.org/schema/c"
+     xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+ 
+ 	<bean id="book1" class="collectiondata.Book" p:id="111" p:name="corejava" p:author="Mr.Ratan" />
+	<bean id="book2" class="collectiondata.Book" p:id="222" p:name="advjava" p:author="Mr.Vishnu" />
+	<bean id="book3" class="collectiondata.Book" p:id="333" p:name="Spring" p:author="Mr.Srikanth" />
+ 	
+ 	<bean id="colldata" class="collectiondata.Collectiondata">
+ 		<property name="names">
+ 			<list>
+ 				<value>ratan</value>
+ 				<value>anu</value>
+ 				<value>sravya</value> 			
+ 			</list> 		
+ 		</property>
+ 		
+ 		<property name="pincodes">
+ 			<set>
+ 				<value>523302</value>
+ 				<value>500078</value>
+ 				<value>500081</value> 			
+ 			</set> 		
+ 		</property>
+ 		
+ 		<property name="wordCount">
+ 			<map>
+ 				<entry key="ratan" value="5"/>
+ 				<entry key="anu" value="4"/>
+ 				<entry key="how" value="10"/> 				
+ 			</map>	
+ 		</property>
+ 		
+ 		<property name="database">
+ 			<props>
+ 				<prop key="username">system</prop>
+ 				<prop key="password">manager</prop>
+ 			</props>	
+ 		</property>
+ 		
+ 		<property name="books">
+ 			<list>
+ 				<ref bean="book1"/> 
+ 				<ref bean="book2"/> 
+ 				<ref bean="book3"/> 			
+ 			</list> 		
+ 		</property>
+ 	</bean>	
+ </beans>
