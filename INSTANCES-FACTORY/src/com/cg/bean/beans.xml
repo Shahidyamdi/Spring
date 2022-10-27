@@ -1,0 +1,9 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 	
+ 	<bean id="insfact" class="com.cg.bean.InstanceFactoryBean"/>
+    <bean id="demo" factory-method="getDemo" factory-bean="insfact"/>  
+   	
+</beans>
