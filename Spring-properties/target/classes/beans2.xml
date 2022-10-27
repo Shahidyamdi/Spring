@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+      <context:property-placeholder location="classpath:data.properties"/>
+     <context:component-scan base-package="com.cg"/>
+ 
+ 
+ <!--  
+  <bean id="test" class="com.capgemini.properties.testdata">
+  <property name="fee" value ="8000"/>
+  <property name="name" value ="ratan"/>
+  </bean>
+  -->
+  
+<!--    <bean id="test" class="com.cg.testdata" p:fee="${fee}" p:name="${name}"
+ > 
+ </bean>-->
+ 
+  
+<!-- <bean id="test" class="com.capgemini.properties.testdata">
+  <property name="fee" value ="${fee}"/>
+  <property name="name" value ="${name}"/>
+  </bean>-->
+  
+  
+  
+
+
+               
+</beans > 
