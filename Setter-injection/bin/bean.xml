@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+ <bean id ="company" class="com.cg.company">
+
+<property name="name" value="dmart"/>
+<property name="regid" value="123456"/>
+<property name="location" value="machilipatnam"/>
+</bean>
+
+
+<bean id ="pro" class="com.cg.product">
+<property name="pid" value ="4569"/>
+<property name="pname" value ="soap"/>
+<property name="pcost" value ="100.00"/>
+<property name="company" ref ="company"/>
+
+
+</bean>
+
+
+
+<!-- <bean id ="company" class="com.cg.company" c:name="vmart" c:regid="123" c:location="guntur"/>-->
+<!-- <bean id ="pro" class="com.cg.product" c:pid="456123" c:pname="pen" c:pcost="50.00" c:company-ref="company"/>-->
+
+
+
+
+
+</beans>
